@@ -1,1 +1,4 @@
 node_modules
+.DS_Store
+ghost-dev.db
+ghost.db
