@@ -1,0 +1,3 @@
+[submodule "content/apps/ouija"]
+	path = content/apps/ouija
+	url = https://github.com/goinstant/ouija
