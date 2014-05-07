@@ -17,6 +17,7 @@
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/ouija.css?v=d230579314" />
     <script type="text/javascript" src="//use.typekit.net/crg1osg.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -51,6 +52,14 @@
 
     {{! The main JavaScript file for Ouija }}
     <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+    {{#with post}}
+    <script>
+      window.ouija_connect_url = 'https://goinstant.net/ntassone/ouija-demo';
+      window.ouija_identifier = {{id}};
+      </script>
+      <script src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+      <script src="/assets/js/ouija.js?v=d230579314"></script>
+    {{/with}}
 
 </body>
 </html>

@@ -3,6 +3,7 @@
 @import "normalize";
 @import "variables";
 @import "fonts";
+@import "blog";
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -14,11 +15,14 @@ img {
 }
 
 body {
-  color: #eee;
-  font-family: $font-body;
-  font-weight: $light;
-  background: #403c54 url(../img/dust.png);
   background-attachment: fixed;
+  background: #fff;
+  &.home-template {
+    color: #eee;
+    font-family: $font-body;
+    font-weight: $light;
+    background: #403c54 url(../img/dust.png);
+  }
 }
 
 //preloader
@@ -37,7 +41,7 @@ a {
 }
 
 p {
-  a {
+  > a {
     text-decoration: none;
     border-bottom: 1px solid fade-out($color-body, .5);
     &:hover {
@@ -53,7 +57,7 @@ h2 {
   font-size: 30px;
 }
 
-section {
+.main-wrapper {
   @include outer-container;
   padding-left: 15px;
   padding-right: 15px;
@@ -534,6 +538,7 @@ h1 {
   h3 {
     margin: 0;
     font-weight: $light;
+    color: #eee;
     font-size: 23px;
     a {
       opacity: .7;
