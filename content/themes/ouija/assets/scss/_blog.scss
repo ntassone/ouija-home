@@ -11,15 +11,21 @@
 
 header.cta {
   position: fixed;
-  width: auto;
-  height: 50px;
+  width: 100%;
   top: 0;
   left: 0;
-  padding: 7px 7px 0;
-  z-index: 100;
+  padding: 0 20px 0;
+  z-index: 10000;
+  border-top: 3px solid $orange;
+  border-top-color: fade-out($orange, .2);
   .button {
     padding: 5px 20px 6px;
+    border-radius: 0 0 5px 5px;
     font-size: 1rem;
+    &:hover {
+      padding: 8px 20px 10px;
+      background: fade-out($orange, .2);
+    }
   }
 }
 

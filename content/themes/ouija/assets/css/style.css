@@ -533,15 +533,20 @@ textarea {
 
 header.cta {
   position: fixed;
-  width: auto;
-  height: 50px;
+  width: 100%;
   top: 0;
   left: 0;
-  padding: 7px 7px 0;
-  z-index: 100; }
+  padding: 0 20px 0;
+  z-index: 10000;
+  border-top: 3px solid #ff7e22;
+  border-top-color: rgba(255, 126, 34, 0.8); }
   header.cta .button {
     padding: 5px 20px 6px;
+    border-radius: 0 0 5px 5px;
     font-size: 1rem; }
+    header.cta .button:hover {
+      padding: 8px 20px 10px;
+      background: rgba(255, 126, 34, 0.8); }
 
 .post-content {
   font-size: 1.2rem; }
