@@ -329,10 +329,13 @@ h1 {
   }
 }
 
-.readme {
+.panel {
   position: relative;
   padding-top: $margin;
   border-top: 3px solid $purpleDark;
+  .table {
+    margin-top: 20px;
+  }
   h2 {
     margin: $margin $margin/2;
     text-align: center;
@@ -400,7 +403,7 @@ h1 {
   }
   code, pre {
     font-family: $font-mono;
-    letter-spacing: .025em;
+    letter-spacing: -.025em;
     color: white;
   }
   pre {
@@ -532,6 +535,49 @@ h1 {
   padding: $margin;
   z-index: 2;
   background: $purpleDark;
+}
+
+.table {
+  @include clearfix();
+  @include span-columns(12);
+  border-radius: 3px;
+  > ul {
+    @include row(table);
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    &:last-child {
+      li {
+        border-bottom: 0;
+      }
+    }
+    li {
+      @include pad(15px default);
+      border-right: 1px solid $purpleDark;
+      border-bottom: 1px solid $purpleDark;
+      background: darken($purpleDark, 5%);
+      &:nth-child(1) {
+        @include span-columns(4);
+      }
+      &:nth-child(2) {
+        @include span-columns(2);
+      }
+      &:nth-child(3) {
+        @include span-columns(2);
+      }
+      &:nth-child(4) {
+        @include span-columns(4);
+        border-right: 0;
+      }
+    }
+    &.table-header {
+      li {
+        background: fade-out($orange, .9);
+        color: $orange;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .social {

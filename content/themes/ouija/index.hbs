@@ -51,7 +51,7 @@
       </li>
     </ul>
   </article>
-  <article id="readme" class="readme">
+  <article id="readme" class="panel">
     <h2>How to Install Ouija</h2>
     <div class="banner">
       <h4><span class="icon-warning"></span><span> Heads up:</span> Ouija is not yet ready for production use.</h4>
@@ -199,19 +199,44 @@ window.ouija_identifier = &#123;&#123;id&#125;&#125;
 &#123;&#123;/with&#125;&#125;</pre>
               </div>
             </li>
-            <li>
-              <div class="left">
-                Optionally configure options for Ouija in the previous snippet. More options are being added as we improve Ouija. The current version supports the options on the right.
-              </div>
-              <div class="right">
-                <pre>
-window.ouija_article_content = '.my-article-content';
-window.ouija_section_elements = 'p, ol, :has(img)';</pre>
-              </div>
-            </li>
           </ol>
         </div>
       </div>
+    </div>
+  </article>
+  <article id="configuration" class="panel">
+    <h2>Configuring Ouija</h2>
+    <div class="table">
+      <ul class="table-header">
+        <li>Option</li>
+        <li>Type</li>
+        <li>Default</li>
+        <li>Description</li>
+      </ul>
+      <ul>
+        <li><code>window.ouija_identifier</code></li>
+        <li>String</li>
+        <li>n/a</li>
+        <li>Ghost Post UID. A unique, static ID for the blog post.</li>
+      </ul>
+      <ul>
+        <li><code>window.ouija_connect_url</code></li>
+        <li>String</li>
+        <li>n/a</li>
+        <li>Your GoInstant connect URL. Used for connecting to the <a href="https://goinstant.com/" target="_blank">GoInstant platform.</a></li>
+      </ul>
+      <ul>
+        <li><code>window.ouija_article_content</code></li>
+        <li>String</li>
+        <li><code>'.post-content'</code></li>
+        <li>Selector for the section elements' parent.</li>
+      </ul>
+      <ul>
+        <li><code>window.ouija_section_elements</code></li>
+        <li>String</li>
+        <li><code>'p, ol, :has(img)'</code></li>
+        <li>Selector for which sections in the post should have a comment block.</li>
+      </ul>
     </div>
   </article>
 </section>
