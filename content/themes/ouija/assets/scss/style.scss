@@ -4,6 +4,7 @@
 @import "variables";
 @import "fonts";
 @import "blog";
+@import "ouija";
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -101,6 +102,18 @@ a.button {
   small {
     margin-left: .5em;
     color: fade-out(white, .35);
+  }
+  &.outline {
+    padding: 7px 20px 9px;
+    margin-right: .5em;
+    background: transparent;
+    border: 3px solid fade-out(white, .5);
+    color: fade-out(white, .2);
+    &:hover {
+      background: fade-out(white, .95);
+      border-color: white;
+      color: white;
+    }
   }
 }
 
@@ -245,6 +258,9 @@ h1 {
       margin: $margin*2 $margin;
     }
   }
+  h2 {
+    margin-top: .5em;
+  }
   p {
     line-height: 1.7;
     font-size: 18px;
@@ -256,6 +272,9 @@ h1 {
       @include fill-parent();
       padding: 0;
       text-align: center;
+    }
+    .button {
+      display: block;
     }
   }
   aside {

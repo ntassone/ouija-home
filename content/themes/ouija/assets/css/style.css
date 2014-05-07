@@ -662,6 +662,9 @@ header.cta {
   max-width: none;
   margin: 0 -13%; }
 
+.ouija-author a {
+  color: #3F3C53; }
+
 * {
   -webkit-font-smoothing: antialiased;
   -webkit-box-sizing: border-box;
@@ -763,6 +766,20 @@ a.button {
   a.button small {
     margin-left: .5em;
     color: rgba(255, 255, 255, 0.65); }
+  button.outline,
+  input[type="submit"].outline,
+  a.button.outline {
+    padding: 7px 20px 9px;
+    margin-right: .5em;
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8); }
+    button.outline:hover,
+    input[type="submit"].outline:hover,
+    a.button.outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: white;
+      color: white; }
 
 input[type="text"],
 input[type="email"] {
@@ -919,6 +936,8 @@ h1 {
     @media screen and (max-width: 740px) {
       .features .feature {
         margin: 40px 20px; } }
+  .features h2 {
+    margin-top: .5em; }
   .features p {
     line-height: 1.7;
     font-size: 18px; }
@@ -935,6 +954,8 @@ h1 {
         width: 100%;
         padding: 0;
         text-align: center; } }
+    .features article .button {
+      display: block; }
   .features aside {
     float: left;
     display: block;
